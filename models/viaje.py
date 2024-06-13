@@ -2,8 +2,8 @@
 
 from odoo import models, fields, api
 
-class Viajes(models.Model):
-    _name = 'ave.tren'
+class Viaje(models.Model):
+    _name = 'ave.viaje'
     _description = 'Modelo de los viajes'
 
     nombre = fields.Char(string='ID del Viaje', required=True)
