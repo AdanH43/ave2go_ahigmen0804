@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="grupo_viajes" model="res.groups">
+        <field name="name">Viajes</field>
+    </record>
+        <record id="grupo_reservas" model="res.groups">
+        <field name="name">Reservas</field>
+    </record>
+        <record id="grupo_agencia" model="res.groups">
+        <field name="name">Agencia</field>
+    </record>
+</odoo>
