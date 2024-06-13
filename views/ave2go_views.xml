@@ -4,7 +4,7 @@
         <!-- Acciones del menú -->
         <record id="action_viaje_ave2go" model="ir.actions.act_window">
             <field name="name">Viajes</field>
-            <field name="res_model">ave.tren</field>
+            <field name="res_model">ave.viaje</field>
             <field name="view_mode">tree,form</field>
         </record>
 
