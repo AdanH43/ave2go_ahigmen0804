@@ -9,7 +9,7 @@
                 <tree string="Reservas">
                     <field name="fecha_reserva"/>
                     <field name="asientos_reservados"/>
-                    <field name="cliente_ids"/>
+                    <field name="cliente_id"/>
                     <field name="viaje_id"/>
                 </tree>
             </field>
