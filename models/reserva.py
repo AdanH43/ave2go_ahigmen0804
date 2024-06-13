@@ -7,7 +7,7 @@ class Reserva(models.Model):
 
     fecha_reserva = fields.Date(string='Fecha de Reserva', required=True)
     asientos_reservados = fields.Integer(string='Asientos Reservados', required=True)
-    cliente_id = fields.Many2one('ave.cliente', string='Cliente', required=True)
+    cliente_id = fields.Many2one('ave.cliente', string='Cliente')
     viaje_id = fields.Many2one('ave.viaje', string='Viaje', required=True)
 
     @api.constrains('fecha_reserva', 'viaje_id')
@@ -20,11 +20,11 @@ class Reserva(models.Model):
             if reserva.fecha_reserva > reserva.viaje_id.fecha_viaje:
                 raise ValidationError('La fecha de la reserva no puede ser después de la fecha del viaje.')
 
-    @api.constrains('asientos_reservados', 'viaje_id')
+    @api.constrains('cliente_id')
     def _check_asientos_reservados(self):
         for reserva in self:
-            if reserva.asientos_reservados <= 0:
-                raise ValidationError('Debe especificar al menos un asiento reservado.')
+            if not reserva.cliente_id:
+                raise ValidationError('La reserva debe tener un cliente.')
             if reserva.asientos_reservados > reserva.viaje_id.asientos_disponibles:
                 raise ValidationError('No hay suficientes asientos disponibles para esta reserva.')
 
