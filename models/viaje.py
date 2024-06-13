@@ -22,3 +22,10 @@ class Viaje(models.Model):
         for viaje in self:
             if viaje.numero_asientos < 1:
                 raise ValidationError('El número de asientos debe ser al menos 1.')
+            
+    # Método para mostrar el nombre del viaje en las relaciones
+    def name_get(self):
+        result = []
+        for viaje in self:
+            result.append((viaje.id, viaje.nombre))
+        return result        
