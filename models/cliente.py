@@ -9,6 +9,10 @@ class Cliente(models.Model):
     apellidos = fields.Char(string='Apellidos', required=True)
     identificacion = fields.Char(string='Identificación (DNI o Pasaporte)', required=True, copy=False)
 
+    _sql_constraints = [
+        ('name_uniq','UNIQUE (idenificacion)', 'la identificacion del cliente ya existe')
+    ]
+
     def name_get(self):
         result = []
         for record in self:

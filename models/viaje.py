@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
+from odoo.exceptions import ValidationError
 
 class Viaje(models.Model):
     _name = 'ave.viaje'
@@ -11,6 +12,10 @@ class Viaje(models.Model):
     duracion_minutos = fields.Integer(string='Duración (minutos)', required=True)
     numero_asientos = fields.Integer(string='Número de Asientos', required=True, default=1)
     asientos_disponibles = fields.Integer(string='Asientos Disponibles', compute='_compute_asientos_disponibles', store=True)
+
+    _sql_constraints = [
+        ('name_uniq','UNIQUE (nombre)', 'El ID del viaje ya existe')
+    ]
 
     @api.depends('numero_asientos')
     def _compute_asientos_disponibles(self):

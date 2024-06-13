@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 from odoo import models, fields, api
+from odoo.exceptions import ValidationError
 
 class Reserva(models.Model):
     _name = 'ave.reserva'
     _description = 'Reserva de Viaje en Tren'
 
-    fecha_reserva = fields.Date(string='Fecha de Reserva', required=True)
+    fecha_reserva = fields.Date(string='Fecha de Reserva', required=True,  default=fields.Date.context_today)
     asientos_reservados = fields.Integer(string='Asientos Reservados', required=True)
     cliente_id = fields.Many2one('ave.cliente', string='Cliente')
     viaje_id = fields.Many2one('ave.viaje', string='Viaje', required=True)
