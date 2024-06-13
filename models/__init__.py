@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from . import clientes
+from . import cliente
 from . import viajes
 from . import reserva
