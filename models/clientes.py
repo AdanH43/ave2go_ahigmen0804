@@ -8,6 +8,5 @@ class Cliente(models.Model):
     nombre = fields.Char(string='Nombre', required=True)
     apellidos = fields.Char(string='Apellidos', required=True)
     identificacion = fields.Char(string='Identificación (DNI o Pasaporte)', required=True, copy=False)
-    reserva_ids = fields.Many2many('ave.reserva', string='Reservas')
 
     
