@@ -15,9 +15,6 @@
             </field>
         </record>
 
-       <odoo>
-    <data>
-
         <!-- Vista Formulario para Reservas -->
         <record model="ir.ui.view" id="view_reserva_form">
             <field name="name">Reserva Form</field>
