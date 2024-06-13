@@ -9,4 +9,10 @@ class Cliente(models.Model):
     apellidos = fields.Char(string='Apellidos', required=True)
     identificacion = fields.Char(string='Identificación (DNI o Pasaporte)', required=True, copy=False)
 
+    def name_get(self):
+        result = []
+        for cliente in self:
+            result.append((cliente.id, cliente.nombre, cliente.apellidos))
+        return result
+
     
