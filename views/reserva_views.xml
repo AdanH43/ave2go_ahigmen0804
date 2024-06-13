@@ -24,9 +24,9 @@
                     <sheet>
                         <group>
                             <field name="fecha_reserva"/>
+                            <field name="asientos_reservados"/>
                             <field name="cliente_id"/>
                             <field name="viaje_id"/>
-                            <field name="asientos_reservados" readonly="1"/>
                         </group>
                     </sheet>
                 </form>
