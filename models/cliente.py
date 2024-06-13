@@ -11,8 +11,9 @@ class Cliente(models.Model):
 
     def name_get(self):
         result = []
-        for cliente in self:
-            result.append((cliente.id, cliente.nombre, cliente.apellidos))
+        for record in self:
+            name = f"{record.nombre} {record.apellidos}"
+            result.append((record.id, name))
         return result
 
     
