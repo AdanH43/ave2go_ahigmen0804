@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+
+        <!-- Vista Tree para Reservas -->
+        <record model="ir.ui.view" id="view_reserva_tree">
+            <field name="name">Reserva Tree</field>
+            <field name="model">ave.reserva</field>
+            <field name="arch" type="xml">
+                <tree string="Reservas">
+                    <field name="fecha_reserva"/>
+                    <field name="asientos_reservados"/>
+                    <field name="cliente_ids"/>
+                    <field name="viaje_id"/>
+                </tree>
+            </field>
+        </record>
+
+       <odoo>
+    <data>
+
+        <!-- Vista Formulario para Reservas -->
+        <record model="ir.ui.view" id="view_reserva_form">
+            <field name="name">Reserva Form</field>
+            <field name="model">ave.reserva</field>
+            <field name="arch" type="xml">
+                <form string="Reserva">
+                    <sheet>
+                        <group>
+                            <field name="fecha_reserva"/>
+                            <field name="cliente_ids"/>
+                            <field name="viaje_id"/>
+                            <field name="asientos_reservados" readonly="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

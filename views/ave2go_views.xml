@@ -1,0 +1,32 @@
+<odoo>
+    <data>
+
+        <!-- Acciones del menú -->
+        <record id="action_viaje_ave2go" model="ir.actions.act_window">
+            <field name="name">Viajes</field>
+            <field name="res_model">ave.tren</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_cliente_ave2go" model="ir.actions.act_window">
+            <field name="name">Clientes</field>
+            <field name="res_model">ave.cliente</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_reserva_ave2go" model="ir.actions.act_window">
+            <field name="name">Reservas</field>
+            <field name="res_model">ave.reserva</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menú principal -->
+        <menuitem id="menu_viajes_ave2go" name="Viajes Ave2go ahigmen0804" sequence="10"/>
+
+        <!-- Menú para cada acción -->
+        <menuitem name="Viajes" id="menu_viajes_ave2go_viajes" parent="menu_viajes_ave2go" action="action_viaje_ave2go"/>
+        <menuitem name="Clientes" id="menu_viajes_ave2go_clientes" parent="menu_viajes_ave2go" action="action_cliente_ave2go"/>
+        <menuitem name="Reservas" id="menu_viajes_ave2go_reservas" parent="menu_viajes_ave2go" action="action_reserva_ave2go"/>
+
+    </data>
+</odoo>

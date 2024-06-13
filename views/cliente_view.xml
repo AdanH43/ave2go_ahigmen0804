@@ -1,0 +1,35 @@
+<odoo>
+    <data>
+
+        <!-- Vista Tree para Cliente -->
+        <record model="ir.ui.view" id="view_cliente_tree">
+            <field name="name">Cliente Tree</field>
+            <field name="model">ave.cliente</field>
+            <field name="arch" type="xml">
+                <tree string="Clientes">
+                    <field name="identificacion"/>
+                    <field name="nombre"/>
+                    <field name="apellidos"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vista Formulario para Cliente -->
+        <record model="ir.ui.view" id="view_cliente_form">
+            <field name="name">Cliente Form</field>
+            <field name="model">ave.cliente</field>
+            <field name="arch" type="xml">
+                <form string="Cliente">
+                    <sheet>
+                        <group>
+                            <field name="identificacion"/>
+                            <field name="nombre"/>
+                            <field name="apellidos"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>
