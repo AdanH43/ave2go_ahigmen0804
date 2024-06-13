@@ -1,7 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ave_cliente,Access Ave Clientes,model_ave_cliente,base.grupo_agencia,1,1,1,1
-access_ave_viaje,Access Ave Viajes,model_ave_viaje,base.grupo_agencia,1,1,1,1
-access_ave_reserva,Access Ave Reservas,model_ave_reserva,base.grupo_agencia,1,1,1,1
-access_ave_viaje,Access Ave Viajes,model_ave_viaje,base.grupo_viajes,1,1,1,1
-access_ave_reserva,Access Ave Reservas,model_ave_reserva,base.grupo_reservas,1,1,1,1
-access_ave_cliente,Access Ave Clientes,model_ave_cliente,base.grupo_reservas,1,1,1,1
+access_ave_cliente1,Access Ave Clientes,model_ave_cliente,base.grupo_agencia,1,1,1,1
+access_ave_viaje1,Access Ave Viajes,model_ave_viaje,base.grupo_agencia,1,1,1,1
+access_ave_reserva1,Access Ave Reservas,model_ave_reserva,base.grupo_agencia,1,1,1,1
+access_ave_viaje2,Access Ave Viajes,model_ave_viaje,base.grupo_viajes,1,1,1,1
+access_ave_reserva2,Access Ave Reservas,model_ave_reserva,base.grupo_reservas,1,1,1,1
+access_ave_cliente2,Access Ave Clientes,model_ave_cliente,base.grupo_reservas,1,1,1,1
