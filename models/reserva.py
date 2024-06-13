@@ -5,10 +5,10 @@ class Reserva(models.Model):
     _name = 'ave.reserva'
     _description = 'Reserva de Viaje en Tren'
 
-    fecha_reserva = fields.Date(string='Fecha de la Reserva', required=True, default=fields.Date.context_today)
-    asientos_reservados = fields.Integer(string='Asientos Reservados', required=True, default=1)
-    cliente_ids = fields.Many2one('cliente', string='Cliente', required=True)
-    viaje_id = fields.Many2one('viaje.tren', string='Viaje', required=True)
+    fecha_reserva = fields.Date(string='Fecha de Reserva', required=True)
+    asientos_reservados = fields.Integer(string='Asientos Reservados', required=True)
+    cliente_ids = fields.Many2many('ave.cliente', string='Clientes')
+    viaje_id = fields.Many2one('ave.viaje', string='Viaje', required=True)
 
     @api.constrains('fecha_reserva', 'viaje_id')
     def _check_fechas(self):
