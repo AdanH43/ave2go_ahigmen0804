@@ -4,7 +4,7 @@
         <!-- Vista Tree para Viajes -->
         <record model="ir.ui.view" id="view_viaje_tree">
             <field name="name">Viaje Tree</field>
-            <field name="model">ave.tren</field>
+            <field name="model">ave.viaje</field>
             <field name="arch" type="xml">
                 <tree string="Viajes">
                     <field name="nombre"/>
@@ -19,7 +19,7 @@
         <!-- Vista Formulario para Viajes -->
         <record model="ir.ui.view" id="view_viaje_form">
             <field name="name">Viaje Form</field>
-            <field name="model">ave.tren</field>
+            <field name="model">ave.viaje</field>
             <field name="arch" type="xml">
                 <form string="Viaje">
                     <sheet>
